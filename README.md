@@ -29,5 +29,5 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O Weather Forecast é um App de previsão do tempo!
 
-- [Acesse o projeto finalizado, online](https://GustavoJeri.github.io/weatherforecast)
+- [Acesse o projeto finalizado, online](https://GustavoJeri.github.io/weather-forecast)
 
