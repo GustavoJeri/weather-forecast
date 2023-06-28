@@ -25,13 +25,13 @@ async function buscarcidade(cidade){
    
 }
 
-function cliquei(event) {
-   if(event.key === "Enter") {
-    {
-        const cidade = document.querySelector('.input-city').value
-        buscarcidade(cidade)
-    }
-   }
-    
+function cliquei() {
+    const cidade = document.querySelector('.input-city').value;
+    buscarcidade(cidade);
 }
 
+function verificarTecla(event) {
+    if (event.key === "Enter") {
+        cliquei();
+    }
+}
