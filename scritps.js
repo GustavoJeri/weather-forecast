@@ -47,8 +47,4 @@ document.addEventListener("keypress", function(e){
     }
 })
 
-function verificarinput(){
-  if(cidade.value.length === 0){
-    console.log("preencha o campo")
-  }
-}
+
