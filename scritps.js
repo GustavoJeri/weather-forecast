@@ -2,8 +2,14 @@
 
 const key = "4ab3e1548e97afde8663393ae7ef3356"
 
-
 function colocardadosnatela(dados) {
+
+  if(dados.cod === "404"){
+    alert("Cidade não encontrada. Por favor, preencha o campo com uma cidade válida.")
+    return
+  }
+
+
     console.log(dados)
     document.querySelector('.city').innerHTML = `Tempo em ${dados.name}`
     document.querySelector('.temp').innerHTML = Math.floor(dados.main.temp) + "ºC"
@@ -11,9 +17,6 @@ function colocardadosnatela(dados) {
     document.querySelector('.umidade').innerHTML = `Umidade: ${dados.main.humidity}%`
     document.querySelector('.prev').src =`https://openweathermap.org/img/wn/${dados.weather[0].icon}.png` 
     
-    if(dados.name == undefined){
-        console.log("Por favor escreva um nome de cidade válido!")
-    }
 }
 
 
@@ -26,12 +29,26 @@ async function buscarcidade(cidade){
 }
 
 function cliquei() {
-    const cidade = document.querySelector('.input-city').value;
-    buscarcidade(cidade);
+  const cidadeInput = document.querySelector(".input-city")
+  const cidade = cidadeInput.value
+
+if(cidade.trim() === "") {
+  alert("Por favor, preencha o campo.")
+  return
+} 
+buscarcidade(cidade)
+cidadeInput.value = ""
+
 }
 
-function verificarTecla(event) {
-    if (event.key === "Enter") {
-        cliquei();
+document.addEventListener("keypress", function(e){
+  if(e.key === "Enter"){
+    cliquei()
     }
+})
+
+function verificarinput(){
+  if(cidade.value.length === 0){
+    console.log("preencha o campo")
+  }
 }
