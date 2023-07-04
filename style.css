@@ -65,6 +65,10 @@ align-items: center;
     float: right;
 }
 
+.button-busca:hover {
+    background-color: #7878780d ;
+}
+
 .img-busca{
     width: 20px;
 }
